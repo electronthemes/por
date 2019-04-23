@@ -1,19 +1,12 @@
-import VueRouter from 'vue-router'
-import Vue from 'vue'
-Vue.use(VueRouter)
+import React from 'react'
 
-/**
- * Pages
- */
-import Home from '../pages/Home.vue'
-import Contact from '../pages/Contact.vue'
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
-const router = new VueRouter({
-    mode: 'history',
-    routes: [
-        { path: '/', component: Home },
-        { path: '/contact', component: Contact },
-    ],
-})
-
-export default router
+export default () => (
+    <BrowserRouter>
+        <Switch>
+            <Route path="/" exact component={() => <h1>Main Page</h1>} />
+            <Route path="/test" component={() => <h1>text Page</h1>} />
+        </Switch>
+    </BrowserRouter>
+)

@@ -16,13 +16,7 @@
 </head>
 
 <body>
-    <div id="app">
-        <h1>Navbar</h1>
-        <router-view></router-view>
-        <h1>Footer</h1>
-
-
-    </div>
+    <div id="app"></div>
     <script src="js/app.js"></script>
 </body>
 
